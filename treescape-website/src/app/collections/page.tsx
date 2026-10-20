@@ -110,7 +110,7 @@ export default function CollectionsPage() {
             >
               <div className="relative aspect-[16/11] bg-[#FAF8F3] overflow-hidden">
                 <Image
-                  src={item.imageWebp || item.image}
+                  src={item.image}
                   alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
