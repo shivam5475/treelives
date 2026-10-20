@@ -23,10 +23,15 @@ export default function ImageLightbox({
   initialIndex = 0,
 }: ImageLightboxProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [prevOpenKey, setPrevOpenKey] = useState({ isOpen, initialIndex });
+
+  if (prevOpenKey.isOpen !== isOpen || prevOpenKey.initialIndex !== initialIndex) {
+    setPrevOpenKey({ isOpen, initialIndex });
+    if (isOpen) setCurrentIndex(initialIndex);
+  }
 
   useEffect(() => {
     if (isOpen) {
-      setCurrentIndex(initialIndex);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
