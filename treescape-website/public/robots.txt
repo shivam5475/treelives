@@ -1,0 +1,5 @@
+# Treescape Living - robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://treescapeliving.com/sitemap.xml
