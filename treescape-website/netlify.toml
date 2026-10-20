@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# The site is a static export (output: 'export'), so the Next.js runtime
+# plugin isn't needed. Netlify serves the generated "out" folder directly.
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
